@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "landing page for my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregsypek/portfolio.git"
+  },
+  "author": "gregsypek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregsypek/portfolio/issues"
+  },
+  "homepage": "https://github.com/gregsypek/portfolio#readme",
+  "dependencies": {
+    "eslint": "^7.27.0",
+    "prettier": "^2.3.0"
+  }
+}
