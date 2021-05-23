@@ -1,0 +1,49 @@
+.home {
+  min-height: 100vh;
+  margin: 0 auto;
+  // border: 1px solid black;
+
+  &__nav {
+    background-color: $color-secondary;
+    border: 1px solid $color-tertiary;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    &-list {
+      color: $color-tertiary;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      // border: 1px solid $color-tertiary;
+    }
+    &--name {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    // &--title {
+    // }
+    // &--about {
+    // }
+    &--link {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  &__main {
+  }
+  &__picture {
+    &--left-square {
+    }
+    &--right-square {
+    }
+  }
+  &__content {
+  }
+  &__title {
+    &--black {
+    }
+  }
+  &__hi {
+  }
+  &__btn {
+  }
+}

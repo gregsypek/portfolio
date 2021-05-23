@@ -1,0 +1,40 @@
+$font-primary: 'Poppins', sans-serif;
+
+// COLORS
+
+$color-primary: #e3e2df;
+$color-secondary: #ffffff;
+$color-tertiary: #39393a;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-primary;
+}
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+
+  cursor: pointer;
+  transition: all 0.3s;
+
+  .btn:hover {
+    background-color: var(--color-primary-darker);
+  }
+}

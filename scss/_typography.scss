@@ -1,0 +1,17 @@
+body {
+  font-weight: 400;
+  font-family: $font-primary;
+  border: 1px solid black;
+  // font-size: 16px;
+  line-height: 1.7;
+  padding: 5rem;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  margin: 0;
+  // color: $color-honey;
+}
