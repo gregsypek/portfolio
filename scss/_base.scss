@@ -5,6 +5,7 @@ $font-primary: 'Poppins', sans-serif;
 $color-primary: #e3e2df;
 $color-secondary: #ffffff;
 $color-tertiary: #39393a;
+$color-fourth: #eb5d3f;
 
 *,
 *::after,
@@ -25,16 +26,11 @@ body {
 .btn {
   display: inline-block;
   background-color: var(--color-primary);
-  font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
   border: none;
-  padding: 1.25rem 4.5rem;
-
+  padding: 0.5rem 4rem;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s;
-
-  .btn:hover {
-    background-color: var(--color-primary-darker);
-  }
 }

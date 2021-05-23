@@ -2,12 +2,16 @@
   min-height: 100vh;
   margin: 0 auto;
   // border: 1px solid black;
+  &__main {
+    padding: 5rem;
+  }
 
   &__nav {
     background-color: $color-secondary;
     border: 1px solid $color-tertiary;
     padding: 1rem 2rem;
     font-size: 1.6rem;
+    margin-bottom: 5rem;
     &-list {
       color: $color-tertiary;
       list-style: none;
@@ -29,21 +33,66 @@
     }
   }
   &__main {
+    display: flex;
+    // display: grid;
+    // grid-template-areas: 'pic main';
+  }
+  &__picture-box {
+    display: block;
+    // background-image: url(./public/img/home.png);
+    // &--left-square {
+    // }
+    // &--right-square {
+    // }
   }
   &__picture {
-    &--left-square {
-    }
-    &--right-square {
-    }
   }
   &__content {
+    // grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
   }
   &__title {
-    &--black {
+    &--part1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-fourth;
+      font-weight: 500;
+      font-size: 75px;
+      // line-height: 114.5%;
+      letter-spacing: -0.06em;
+      background-color: $color-secondary;
+      height: 8.1rem;
+      // width: 5.5rem;
+      border: 1px solid $color-tertiary;
+
+      padding: 0 1.5rem;
+      margin: 8rem 0 0 -10rem;
+    }
+    &--part2 {
+      display: inline-block;
+      // font-size: 5rem;
+      line-height: 57px;
+      margin-top: 2rem;
+      width: 46rem;
     }
   }
   &__hi {
+    width: 38rem;
+    font-weight: normal;
   }
   &__btn {
+    color: $color-secondary;
+    background-color: $color-tertiary;
+    font-size: 2.2rem;
+    border: 1px solid transparent;
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-tertiary;
+      border: 1px solid $color-tertiary;
+    }
   }
 }
