@@ -1,7 +1,11 @@
 .home {
-  min-height: 100vh;
-  margin: 0 auto;
+  background-color: $color-primary;
   // border: 1px solid black;
+  min-height: 100vh;
+  padding: 5rem;
+  max-width: 1152px;
+  margin: 0 auto;
+  // border: 1px solid orangered;
   &__main {
     padding: 5rem;
   }
@@ -17,16 +21,11 @@
       list-style: none;
       display: flex;
       justify-content: space-between;
-      // border: 1px solid $color-tertiary;
     }
     &--name {
       text-transform: uppercase;
       font-weight: 700;
     }
-    // &--title {
-    // }
-    // &--about {
-    // }
     &--link {
       text-decoration: none;
       color: inherit;
@@ -39,14 +38,13 @@
   }
   &__picture-box {
     display: block;
-    // background-image: url(./public/img/home.png);
+
     // &--left-square {
     // }
     // &--right-square {
     // }
   }
-  &__picture {
-  }
+
   &__content {
     // grid-area: content;
     display: flex;
@@ -66,7 +64,6 @@
       letter-spacing: -0.06em;
       background-color: $color-secondary;
       height: 8.1rem;
-      // width: 5.5rem;
       border: 1px solid $color-tertiary;
 
       padding: 0 1.5rem;
@@ -74,7 +71,6 @@
     }
     &--part2 {
       display: inline-block;
-      // font-size: 5rem;
       line-height: 57px;
       margin-top: 2rem;
       width: 46rem;
