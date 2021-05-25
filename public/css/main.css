@@ -37,6 +37,7 @@ h3 {
 
 .home {
   background-color: #e3e2df;
+  border: 1px solid black;
   min-height: 100vh;
   padding: 5rem;
   max-width: 1152px;
@@ -46,7 +47,7 @@ h3 {
   .home__nav {
     background-color: #ffffff;
     border: 1px solid #39393a;
-    padding: 1rem 2rem;
+    padding: 0.2rem 2rem;
     font-size: 1.6rem;
     margin-bottom: 5rem; }
     .home__nav-list {
@@ -110,6 +111,7 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     max-width: 1152px;
     margin: 0 auto;
+    border: 1px solid white;
     position: relative; }
   .about__picture-box {
     display: grid;
@@ -147,7 +149,6 @@ h3 {
   .about__text span {
     font-weight: bold; }
   .about__btn {
-    display: flex;
     margin-left: auto;
     color: #ffffff;
     font-size: 2.2rem;
@@ -156,3 +157,76 @@ h3 {
       background-color: #ffffff;
       color: #39393a;
       border: 1px solid #39393a; }
+
+.projects {
+  padding: 5rem;
+  max-width: 1152px;
+  margin: 0 auto;
+  margin-top: 10rem; }
+  .projects__title {
+    display: inline-block;
+    border: 1px solid #39393a;
+    font-weight: 300;
+    padding: 0 1rem; }
+  .projects__boxes {
+    margin-top: 10rem; }
+  .projects__box {
+    display: flex;
+    justify-content: space-between; }
+  .projects__frame {
+    border: 1px solid #39393a;
+    display: inline-block;
+    padding: 2.5rem;
+    background-color: #ffffff; }
+  .projects__img {
+    width: 52rem;
+    height: 25rem; }
+  .projects__details {
+    width: 36rem; }
+  .projects__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e3e2df;
+    font-size: 2rem;
+    background-color: #39393a; }
+    .projects__nav--title {
+      padding-left: 5px; }
+  .projects__icons {
+    display: flex;
+    height: 100%; }
+  .projects__icon {
+    background-color: #39393a;
+    border: none;
+    padding: 0 5px; }
+    .projects__icon img {
+      vertical-align: center; }
+    .projects__icon--view {
+      padding-top: 5px;
+      height: 25px; }
+    .projects__icon--github {
+      width: 100%;
+      padding-top: 5px; }
+    .projects__icon-info {
+      display: inline-block;
+      border: 1px solid #39393a; }
+  .projects__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    padding: 0 2rem; }
+  .projects__details {
+    display: flex;
+    flex-direction: column; }
+  .projects__btn {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #39393a;
+    width: 10rem;
+    padding: 0;
+    font-size: 1.6rem;
+    margin-left: auto;
+    color: inherit; }
+    .projects__btn:hover {
+      background-color: #ffffff; }

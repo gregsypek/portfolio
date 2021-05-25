@@ -35,3 +35,9 @@ body {
   cursor: pointer;
   transition: all 0.3s;
 }
+
+@mixin section {
+  padding: 5rem;
+  max-width: 1152px;
+  margin: 0 auto;
+}

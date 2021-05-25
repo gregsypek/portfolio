@@ -1,0 +1,112 @@
+.projects {
+  // border: 1px solid blue;
+  @include section;
+
+  margin-top: 10rem;
+  &__title {
+    display: inline-block;
+    border: 1px solid $color-tertiary;
+    font-weight: 300;
+    padding: 0 1rem;
+  }
+  &__boxes {
+    margin-top: 10rem;
+    // width: 80vw;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    // border: 1px solid orangered;
+  }
+  &__frame {
+    border: 1px solid $color-tertiary;
+    display: inline-block;
+    padding: 2.5rem;
+    background-color: $color-secondary;
+  }
+  &__img {
+    width: 52rem;
+    height: 25rem;
+  }
+  &__details {
+    width: 36rem;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-primary;
+    font-size: 2rem;
+    background-color: $color-tertiary;
+    // padding: 1rem;
+    &--title {
+      padding-left: 5px;
+    }
+  }
+  &__icons {
+    display: flex;
+    // align-items: baseline;
+    height: 100%;
+    // height: 5rem;
+    // background-color: $color-tertiary;
+  }
+  &__icon {
+    // fill: $color-secondary;
+    // height: 100%;
+    background-color: $color-tertiary;
+    border: none;
+    // width: 3rem;
+    padding: 0 5px;
+    img {
+      vertical-align: center;
+    }
+    &--left {
+    }
+    &--right {
+    }
+    &--view {
+      padding-top: 5px;
+      height: 25px;
+    }
+    &--github {
+      // fill: white;
+      width: 100%;
+      padding-top: 5px;
+    }
+    &-info {
+      display: inline-block;
+      border: 1px solid $color-tertiary;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    padding: 0 2rem;
+
+    &--about {
+    }
+    &--languages {
+    }
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    border: 1px solid $color-tertiary;
+    width: 10rem;
+
+    padding: 0;
+
+    font-size: 1.6rem;
+    margin-left: auto;
+    color: inherit;
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+}

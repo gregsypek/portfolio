@@ -1,10 +1,11 @@
 .home {
   background-color: $color-primary;
-  // border: 1px solid black;
+  border: 1px solid black;
   min-height: 100vh;
-  padding: 5rem;
-  max-width: 1152px;
-  margin: 0 auto;
+  @include section;
+  // padding: 5rem;
+  // max-width: 1152px;
+  // margin: 0 auto;
   // border: 1px solid orangered;
   &__main {
     padding: 5rem;
@@ -13,7 +14,7 @@
   &__nav {
     background-color: $color-secondary;
     border: 1px solid $color-tertiary;
-    padding: 1rem 2rem;
+    padding: 0.2rem 2rem;
     font-size: 1.6rem;
     margin-bottom: 5rem;
     &-list {
