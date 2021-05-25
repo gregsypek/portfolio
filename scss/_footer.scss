@@ -1,0 +1,45 @@
+.footer {
+  min-height: 15vw;
+  // position: relative;
+  &__wrapper {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  &__left {
+    align-self: flex-end;
+  }
+  &__copyright {
+    // position: absolute;
+    // bottom: 1rem;
+    // left: 5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+  }
+  &__right {
+    padding-right: 5rem;
+  }
+  &__nav {
+    @extend .more__nav;
+  }
+  &__square {
+    @extend .more__square;
+  }
+  &__item {
+    @extend .more__item;
+
+    &--about {
+      @extend .more__item--twitter;
+    }
+    &--works {
+      @extend .more__item--email;
+    }
+    &--back-up {
+      @extend .more__item--linkedin;
+      transform: translateY(100%);
+    }
+  }
+}

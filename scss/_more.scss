@@ -11,8 +11,9 @@
     justify-content: space-between;
   }
 
-  // &__left {
-  // }
+  &__left {
+    width: 48rem;
+  }
   &__title {
     color: $color-secondary;
     font-size: 6rem;
@@ -44,34 +45,19 @@
     text-decoration: none;
     font-size: 2.4rem;
     border: 1px solid $color-secondary;
+    width: 13rem;
     &--email {
-      grid-column: 2/3;
+      // grid-column: 2/3;
       background-color: $color-fifth;
       color: $color-tertiary;
     }
     &--twitter {
-      grid-column: 3/4;
+      // grid-column: 3/4;
       background-color: $color-primary;
       color: $color-tertiary;
     }
     &--linkedin {
-      grid-column: 4/5;
-      transform: translateY(-100%);
-      color: $color-secondary;
-      background-color: $color-tertiary;
-    }
-    &--about {
-      grid-column: 2/3;
-      background-color: $color-fifth;
-      color: $color-tertiary;
-    }
-    &--works {
-      grid-column: 3/4;
-      background-color: $color-primary;
-      color: $color-tertiary;
-    }
-    &--back-up {
-      grid-column: 4/5;
+      // grid-column: 4/5;
       transform: translateY(-100%);
       color: $color-secondary;
       background-color: $color-tertiary;
