@@ -46,7 +46,6 @@ h3 {
 
 .home {
   background-color: #e3e2df;
-  border: 1px solid black;
   min-height: 100vh;
   padding: 5rem;
   max-width: 1152px;
@@ -172,7 +171,6 @@ h3 {
       grid-template-columns: repeat(2, 1fr);
   max-width: 1152px;
   margin: 0 auto;
-  border: 1px solid white;
   position: relative;
 }
 
@@ -271,11 +269,8 @@ h3 {
   padding: 0 1rem;
 }
 
-.projects__boxes {
-  margin-top: 10rem;
-}
-
 .projects__box {
+  margin-top: 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

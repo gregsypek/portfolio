@@ -9,11 +9,12 @@
     font-weight: 300;
     padding: 0 1rem;
   }
-  &__boxes {
-    margin-top: 10rem;
-    // width: 80vw;
-  }
+  // &__boxes {
+  //   // margin-top: 10rem;
+  //   // width: 80vw;
+  // }
   &__box {
+    margin-top: 15rem;
     display: flex;
     justify-content: space-between;
     // border: 1px solid orangered;
@@ -60,10 +61,10 @@
     img {
       vertical-align: center;
     }
-    &--left {
-    }
-    &--right {
-    }
+    // &--left {
+    // }
+    // &--right {
+    // }
     &--view {
       padding-top: 5px;
       height: 25px;
@@ -85,10 +86,10 @@
     flex-grow: 1;
     padding: 0 2rem;
 
-    &--about {
-    }
-    &--languages {
-    }
+    // &--about {
+    // }
+    // &--languages {
+    // }
   }
   &__details {
     display: flex;
