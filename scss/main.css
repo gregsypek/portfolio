@@ -164,11 +164,11 @@ h3 {
 }
 
 .about__wrapper {
-  padding: 10rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  padding: 10rem;
   max-width: 1152px;
   margin: 0 auto;
   position: relative;
@@ -390,5 +390,114 @@ h3 {
 
 .projects__btn:hover {
   background-color: #ffffff;
+}
+
+.more {
+  width: 100vw;
+  background-color: #39393a;
+}
+
+.more__wrapper {
+  padding: 5rem;
+  max-width: 1152px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.more__title {
+  color: #ffffff;
+  font-size: 6rem;
+}
+
+.more__info {
+  margin-top: 10rem;
+  color: #ffffff;
+  font-weight: normal;
+  width: 45rem;
+}
+
+.more__right {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: -5rem;
+}
+
+.more__nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr (min-content)[3];
+      grid-template-columns: 1fr repeat(3, -webkit-min-content);
+      grid-template-columns: 1fr repeat(3, min-content);
+}
+
+.more__square {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.more__item {
+  display: inline-block;
+  padding: 21px 11px;
+  text-decoration: none;
+  font-size: 2.4rem;
+  border: 1px solid #ffffff;
+}
+
+.more__item--email {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  background-color: #bdbdbd;
+  color: #39393a;
+}
+
+.more__item--twitter {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  background-color: #e3e2df;
+  color: #39393a;
+}
+
+.more__item--linkedin {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  color: #ffffff;
+  background-color: #39393a;
+}
+
+.more__item--about {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  background-color: #bdbdbd;
+  color: #39393a;
+}
+
+.more__item--works {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  background-color: #e3e2df;
+  color: #39393a;
+}
+
+.more__item--back-up {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  color: #ffffff;
+  background-color: #39393a;
 }
 /*# sourceMappingURL=main.css.map */

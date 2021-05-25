@@ -3,9 +3,9 @@
   width: 100vw;
   min-height: 100vh;
   &__wrapper {
-    padding: 10rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 10rem;
     max-width: 1152px;
     margin: 0 auto;
     // border: 1px solid white;

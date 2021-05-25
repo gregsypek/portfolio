@@ -1,11 +1,8 @@
 .home {
   background-color: $color-primary;
-  // border: 1px solid black;
   min-height: 100vh;
   @include section;
-  // padding: 5rem;
-  // max-width: 1152px;
-  // margin: 0 auto;
+
   // border: 1px solid orangered;
   &__main {
     padding: 5rem;

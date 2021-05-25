@@ -1,0 +1,80 @@
+.more {
+  width: 100vw;
+  background-color: $color-tertiary;
+}
+.more {
+  &__wrapper {
+    padding: 5rem;
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // &__left {
+  // }
+  &__title {
+    color: $color-secondary;
+    font-size: 6rem;
+  }
+  &__info {
+    margin-top: 10rem;
+    color: $color-secondary;
+    font-weight: normal;
+    width: 45rem;
+  }
+
+  &__right {
+    align-self: flex-end;
+    margin-bottom: -5rem;
+  }
+  &__nav {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, min-content);
+    // grid-template-rows: repeat(3, min-content);
+  }
+  &__square {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    display: inline-block;
+    padding: 21px 11px;
+    text-decoration: none;
+    font-size: 2.4rem;
+    border: 1px solid $color-secondary;
+    &--email {
+      grid-column: 2/3;
+      background-color: $color-fifth;
+      color: $color-tertiary;
+    }
+    &--twitter {
+      grid-column: 3/4;
+      background-color: $color-primary;
+      color: $color-tertiary;
+    }
+    &--linkedin {
+      grid-column: 4/5;
+      transform: translateY(-100%);
+      color: $color-secondary;
+      background-color: $color-tertiary;
+    }
+    &--about {
+      grid-column: 2/3;
+      background-color: $color-fifth;
+      color: $color-tertiary;
+    }
+    &--works {
+      grid-column: 3/4;
+      background-color: $color-primary;
+      color: $color-tertiary;
+    }
+    &--back-up {
+      grid-column: 4/5;
+      transform: translateY(-100%);
+      color: $color-secondary;
+      background-color: $color-tertiary;
+    }
+  }
+}
