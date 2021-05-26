@@ -2,6 +2,7 @@
   background-color: $color-tertiary;
   width: 100vw;
   min-height: 100vh;
+  @include space;
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -58,9 +59,9 @@
     }
     &--3 {
       position: absolute;
-      bottom: 5rem;
+      bottom: 9rem;
       left: 10rem;
-      width: 16rem;
+      width: 19rem;
     }
     span {
       font-weight: bold;

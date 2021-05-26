@@ -1,8 +1,9 @@
 .projects {
   // border: 1px solid blue;
   @include section;
+  margin: 10rem auto;
+  @include space;
 
-  margin-top: 10rem;
   &__title {
     display: inline-block;
     border: 1px solid $color-tertiary;

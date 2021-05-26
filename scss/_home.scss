@@ -2,7 +2,7 @@
   background-color: $color-primary;
   min-height: 100vh;
   @include section;
-
+  margin-bottom: 10rem;
   // border: 1px solid orangered;
   &__main {
     padding: 5rem;
