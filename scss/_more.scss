@@ -5,6 +5,7 @@
 }
 .more {
   &__wrapper {
+    // border: 1px solid white;
     padding: 5rem;
     max-width: 1152px;
     margin: 0 auto;
@@ -25,6 +26,7 @@
     color: $color-secondary;
     font-weight: normal;
     width: 100%;
+    font-size: 2rem;
   }
 
   &__right {
@@ -48,6 +50,7 @@
     font-size: 2.4rem;
     border: 1px solid $color-secondary;
     width: 13rem;
+    transition: transform 0.2s ease-in-out;
     &--email {
       // grid-column: 2/3;
       background-color: $color-fifth;
@@ -63,6 +66,20 @@
       transform: translateY(-100%);
       color: $color-secondary;
       background-color: $color-tertiary;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background-color: $color-secondary;
+        color: $color-tertiary;
+      }
+    }
+
+    &--email,
+    &--twitter,
+    &--about,
+    &--works {
+      &:hover {
+        transform: rotate(5deg);
+      }
     }
   }
 }

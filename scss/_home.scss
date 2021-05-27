@@ -3,9 +3,12 @@
   min-height: 100vh;
   @include section;
   margin-bottom: 10rem;
-  // border: 1px solid orangered;
+  border: 1px solid orangered;
   &__main {
     padding: 5rem;
+    @media (max-width: $big) {
+      padding: 0;
+    }
   }
 
   &__nav {
@@ -14,6 +17,9 @@
     padding: 0.2rem 2rem;
     font-size: 1.6rem;
     margin-bottom: 5rem;
+    @media (max-width: $small) {
+      width: 80vw;
+    }
     &-list {
       color: $color-tertiary;
       list-style: none;
@@ -27,15 +33,30 @@
     &--link {
       text-decoration: none;
       color: inherit;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: $color-fourth;
+      }
     }
   }
   &__main {
     display: flex;
-    // display: grid;
-    // grid-template-areas: 'pic main';
+
+    @media (max-width: $huge) {
+      flex-direction: column;
+    }
   }
   &__picture-box {
     display: block;
+    img {
+      @media (max-width: $huge) {
+        display: block;
+        margin: 0 auto;
+
+        width: 70vw;
+        padding: 0;
+      }
+    }
 
     // &--left-square {
     // }
@@ -44,49 +65,84 @@
   }
 
   &__content {
-    // grid-area: content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
+    @media (max-width: $big) {
+      align-items: center;
+      padding: 5rem;
+    }
+    @media (max-width: $small) {
+      padding: 0;
+    }
   }
   &__title {
+    @media (max-width: $small) {
+      max-width: 80vw;
+    }
     &--part1 {
       display: flex;
       justify-content: center;
       align-items: center;
       color: $color-fourth;
       font-weight: 500;
-      font-size: 75px;
-      // line-height: 114.5%;
-      letter-spacing: -0.06em;
       background-color: $color-secondary;
-      height: 8.1rem;
       border: 1px solid $color-tertiary;
 
       padding: 0 1.5rem;
-      margin: 8rem 0 0 -10rem;
+      margin: 8rem 0 0 -8rem;
+
+      @media (max-width: $huge) {
+        margin: 0;
+      }
+      @media (max-width: $small) {
+        max-width: 80vw;
+      }
     }
     &--part2 {
-      display: inline-block;
-      line-height: 57px;
-      margin-top: 2rem;
+      margin: 2rem auto;
       width: 46rem;
+      @media (max-width: $huge) {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        margin: 0.5rem auto;
+      }
+      @media (max-width: $small) {
+        margin: 0.5rem auto;
+      }
+    }
+    @media (max-width: 1100px) {
+      margin-top: 0;
     }
   }
   &__hi {
-    width: 38rem;
+    // width: 38rem;
     font-weight: normal;
+    padding-left: 3rem;
+    @media (max-width: $big) {
+      margin-top: 3rem;
+      padding: 3rem;
+    }
+    @media (max-width: $huge) {
+      padding: 5rem;
+    }
   }
   &__btn {
     color: $color-secondary;
     background-color: $color-tertiary;
-    font-size: 2.2rem;
+    font-size: var(--h5);
     border: 1px solid transparent;
+    padding-right: 3rem;
+    align-self: flex-end;
     &:hover {
       background-color: $color-secondary;
       color: $color-tertiary;
       border: 1px solid $color-tertiary;
+    }
+
+    @media (max-width: $huge) {
+      margin-top: 5rem;
     }
   }
 }

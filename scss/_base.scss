@@ -8,6 +8,14 @@ $color-tertiary: #39393a;
 $color-fourth: #eb5d3f;
 $color-fifth: #bdbdbd;
 
+// BREAKPOINT
+
+$tiny: 200px;
+$small: 576px;
+$big: 768px;
+$large: 992px;
+$huge: 1089px;
+
 *,
 *::after,
 *::before {

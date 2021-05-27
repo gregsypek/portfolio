@@ -3,14 +3,19 @@
   margin-bottom: 15rem;
   // position: relative;
   &__wrapper {
-    max-width: 1152px;
+    // max-width: 1152px;
+    //TODO width of section foooter is a little moved aside  compare to section more
+    max-width: 1166px;
     margin: 0 auto;
+    padding: 0 5rem;
     display: flex;
     justify-content: space-between;
-    padding: 0;
+    // padding: 0;
+    // border: 1px solid;
   }
   &__left {
     align-self: flex-end;
+    width: 51vw;
   }
   &__copyright {
     width: 100%;
@@ -27,7 +32,8 @@
     // flex-basis: 100%;
   }
   &__right {
-    padding-right: 5rem;
+    // padding-right: 5rem;
+    margin-left: 10px;
   }
   &__nav {
     @extend .more__nav;
@@ -47,6 +53,9 @@
     &--back-up {
       @extend .more__item--linkedin;
       transform: translateY(100%);
+      &:hover {
+        border: 1px solid $color-tertiary;
+      }
     }
   }
 }
