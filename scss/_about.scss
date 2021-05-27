@@ -14,6 +14,10 @@
     @media (max-width: $huge) {
       grid-template-columns: 1fr;
     }
+    @media (max-width: $big) {
+      // max-width: 80vw;
+      padding: 0;
+    }
   }
 
   &__picture-box {
@@ -22,6 +26,10 @@
 
     width: 50rem;
     position: relative;
+    @media (max-width: $small) {
+      grid-template-columns: repeat(2, 33vw);
+      width: auto;
+    }
   }
   &__picture {
     border: 1px solid $color-secondary;
