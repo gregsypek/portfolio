@@ -1,7 +1,6 @@
 .projects {
   // border: 1px solid blue;
   @include section;
-  margin: 10rem auto;
   @include space;
 
   &__title {
@@ -9,39 +8,68 @@
     border: 1px solid $color-tertiary;
     font-weight: 300;
     padding: 0 1rem;
+    font-size: var(--h4);
+    margin-left: 5rem;
   }
-  // &__boxes {
-  //   // margin-top: 10rem;
-  //   // width: 80vw;
-  // }
+  &__boxes {
+    padding: 4rem;
+  }
   &__box {
     margin-top: 15rem;
-    display: flex;
-    justify-content: space-between;
 
+    display: grid;
+    grid-template-areas:
+      'img img nav'
+      'img img info'
+      'img img info'
+      'img img btn';
+    grid-column-gap: 5rem;
     @media (max-width: $huge) {
-      flex-direction: column;
-      align-items: center;
+      grid-template-areas:
+        'nav nav nav'
+        'img img img'
+        'info info info'
+        '. . btn';
+      justify-items: center;
+      grid-gap: 5rem;
+      margin-top: 10rem;
     }
-    // border: 1px solid orangered;
+    &:nth-child(even) {
+      grid-template-areas:
+        'nav img img'
+        'info img img'
+        'info img img'
+        'btn img img';
+      @media (max-width: $huge) {
+        grid-template-areas:
+          'nav nav nav'
+          'img img img'
+          'info info info'
+          '. . btn';
+      }
+    }
   }
-  &__frame {
-    border: 1px solid $color-tertiary;
-    display: inline-block;
-    padding: 2.5rem;
-    background-color: $color-secondary;
-  }
+  // &__frame {
+  // }
   &__img {
-    width: 52rem;
-    height: 25rem;
+    border: 1px solid $color-fifth;
+    display: inline-block;
+    padding: 1rem;
+    background-color: $color-secondary;
+    grid-area: img;
+    max-width: 800px;
+    @media (max-width: $huge) {
+      width: 70vw;
+      justify-self: center;
+    }
+    // width: 42vw;
+    max-width: 744px;
+    @media (max-width: $huge) {
+      width: 65vw;
+    }
   }
   &__details {
     width: 36rem;
-    @media (max-width: $huge) {
-      // max-width: 80vw;
-      width: 60%;
-      margin-top: 5rem;
-    }
   }
   &__nav {
     display: flex;
@@ -50,25 +78,29 @@
     color: $color-primary;
     font-size: 2rem;
     background-color: $color-tertiary;
-    // padding: 1rem;
+    grid-area: nav;
+    height: 5rem;
+    margin-bottom: -3rem;
+    @media (max-width: $huge) {
+      width: 70vw;
+      padding: 0 2rem;
+    }
+
     &--title {
       padding-left: 5px;
+      line-height: 100%;
     }
   }
   &__icons {
     display: flex;
-    // align-items: baseline;
-    height: 100%;
-    // height: 5rem;
-    // background-color: $color-tertiary;
   }
   &__icon {
-    // fill: $color-secondary;
-    // height: 100%;
     background-color: $color-tertiary;
     border: none;
-    // width: 3rem;
     padding: 0 5px;
+    @media (max-width: $huge) {
+      padding: 0 10px;
+    }
     img {
       vertical-align: center;
     }
@@ -81,7 +113,6 @@
       height: 25px;
     }
     &--github {
-      // fill: white;
       width: 100%;
       padding-top: 5px;
     }
@@ -94,31 +125,30 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    flex-grow: 1;
     padding: 0 2rem;
-
-    // &--about {
-    // }
-    // &--languages {
-    // }
-  }
-  &__details {
-    display: flex;
-    flex-direction: column;
+    grid-area: info;
+    @media (max-width: $huge) {
+      max-width: 70vw;
+    }
   }
   &__btn {
     display: flex;
     justify-content: center;
     border: 1px solid $color-tertiary;
     width: 10rem;
-
+    height: 3rem;
     padding: 0;
 
     font-size: 1.6rem;
-    margin-left: auto;
     color: inherit;
+    align-self: end;
+    justify-self: end;
+    grid-area: btn;
     &:hover {
       background-color: $color-secondary;
+    }
+    @media (max-width: $huge) {
+      margin-right: 5vw;
     }
   }
 }
