@@ -76,7 +76,7 @@
     justify-content: space-between;
     align-items: center;
     color: $color-primary;
-    font-size: 2rem;
+    font-size: var(--h5);
     background-color: $color-tertiary;
     grid-area: nav;
     height: 5rem;
@@ -87,6 +87,7 @@
     }
     @media (max-width: $small) {
       padding: 0;
+      width: auto;
     }
 
     &--title {
@@ -103,6 +104,9 @@
     padding: 0 5px;
     @media (max-width: $huge) {
       padding: 0 10px;
+    }
+    @media (max-width: $small) {
+      padding: 0 5px;
     }
     img {
       vertical-align: center;

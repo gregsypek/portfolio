@@ -15,10 +15,11 @@
     background-color: $color-secondary;
     border: 1px solid $color-tertiary;
     padding: 0.2rem 2rem;
-    font-size: 1.6rem;
+    font-size: var(--h5);
     margin-bottom: 5rem;
     @media (max-width: $small) {
-      width: 80vw;
+      // padding: 0;
+      font-size: var(--p);
     }
     &-list {
       color: $color-tertiary;
@@ -130,6 +131,9 @@
     }
     @media (max-width: $huge) {
       padding: 5rem;
+    }
+    @media (max-width: $small) {
+      padding: 0;
     }
   }
   &__btn {
