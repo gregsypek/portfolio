@@ -116,12 +116,12 @@
       // transform: translateY(-100%);
       color: $color-secondary;
       background-color: $color-tertiary;
-      transition: all 0.2s ease-in-out;
+      // transition: rotate 0.2s ease-in-out;
 
-      &:hover {
-        background-color: $color-secondary;
-        color: $color-tertiary;
-      }
+      // &:hover {
+      //   background-color: $color-secondary;
+      //   color: $color-tertiary;
+      // }
     }
 
     &--email,
@@ -130,6 +130,12 @@
     &--works {
       &:hover {
         transform: rotate(5deg);
+      }
+    }
+    &--linkedin,
+    &--back-up {
+      &:hover {
+        transform: rotate(-5deg);
       }
     }
   }

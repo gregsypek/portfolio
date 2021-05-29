@@ -235,7 +235,7 @@ h3 {
   .about__btn {
     margin-left: auto;
     color: #ffffff;
-    font-size: 2.2rem;
+    font-size: var(--h5);
     border: 1px solid #ffffff; }
     .about__btn:hover {
       background-color: #ffffff;
@@ -455,13 +455,11 @@ h3 {
     color: #39393a; }
   .more__item--linkedin, .footer__item--back-up {
     color: #ffffff;
-    background-color: #39393a;
-    transition: all 0.2s ease-in-out; }
-    .more__item--linkedin:hover, .footer__item--back-up:hover {
-      background-color: #ffffff;
-      color: #39393a; }
+    background-color: #39393a; }
   .more__item--email:hover, .footer__item--works:hover, .more__item--twitter:hover, .footer__item--about:hover, .more__item--about:hover, .more__item--works:hover {
     transform: rotate(5deg); }
+  .more__item--linkedin:hover, .footer__item--back-up:hover, .more__item--back-up:hover {
+    transform: rotate(-5deg); }
 
 .footer {
   margin-bottom: 5rem; }

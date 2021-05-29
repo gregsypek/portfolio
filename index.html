@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <section class="home">
+    <section class="home" id="home">
       <nav class="home__nav">
         <ul class="home__nav-list">
           <li class="home__nav--name">Grzegorz Sypek</li>
@@ -44,11 +44,11 @@
             Hi my name is Greg. I design and create web pages and build projects
             with attention to clarity and details.
           </h5>
-          <a href="#" class="home__btn btn">My projects</a>
+          <a href="#projects" class="home__btn btn">My projects</a>
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__wrapper">
         <div class="about__picture-box">
            <img
@@ -78,11 +78,11 @@
             I am willing <span>to cooperate</span> to start my adventure with IT
             and develop further in this direction.
           </h5>
-          <a href="#" class="about__btn btn">Contact</a>
+          <a href="#contact" class="about__btn btn">Contact</a>
         </div>
       </div>
     </section>
-    <section class="projects">
+    <section class="projects" id="projects">
       <h2 class="projects__title">My Websites & Apps</h2>
       <div class="projects__boxes">
         <div class="projects__box">
@@ -104,13 +104,13 @@
               </button>
 
               <a
-                href="#"
+                href="https://gregsypek.github.io/honey"
                 target="_blank"
                 class="projects__icon projects__icon--view"
                 ><img src="./public/img/13.svg" alt="arrow view" class="icon"
               /></a>
               <a
-                href="#"
+                href="https://github.com/gregsypek/honey"
                 target="_blank"
                 class="projects__icon projects__icon--github"
                 ><img src="./public/img/14.svg" alt="arrow view" class="icon" />
@@ -142,13 +142,13 @@
               </button>
 
               <a
-                href="#"
+                href="https://wordsapp.netlify.app"
                 target="_blank"
                 class="projects__icon projects__icon--view"
                 ><img src="./public/img/13.svg" alt="arrow view" class="icon"
               /></a>
               <a
-                href="#"
+                href="https://github.com/gregsypek/wordsApp2"
                 target="_blank"
                 class="projects__icon projects__icon--github"
                 ><img src="./public/img/14.svg" alt="arrow view" class="icon" />
@@ -191,13 +191,13 @@
               </button>
 
               <a
-                href="#"
+                href="https://gregsypek.github.io/todoapp"
                 target="_blank"
                 class="projects__icon projects__icon--view"
                 ><img src="./public/img/13.svg" alt="arrow view" class="icon"
               /></a>
               <a
-                href="#"
+                href="https://github.com/gregsypek/todoapp"
                 target="_blank"
                 class="projects__icon projects__icon--github"
                 ><img src="./public/img/14.svg" alt="arrow view" class="icon" />
@@ -227,13 +227,13 @@
               </button>
 
               <a
-                href="#"
+                href="https://gregsypek.github.io/clover"
                 target="_blank"
                 class="projects__icon projects__icon--view"
                 ><img src="./public/img/13.svg" alt="arrow view" class="icon"
               /></a>
               <a
-                href="#"
+                href="https://github.com/gregsypek/clover"
                 target="_blank"
                 class="projects__icon projects__icon--github"
                 ><img src="./public/img/14.svg" alt="arrow view" class="icon" />
@@ -279,13 +279,13 @@
               </button>
 
               <a
-                href="#"
+                href="https://gregsypek.github.io/carpentrysite"
                 target="_blank"
                 class="projects__icon projects__icon--view"
                 ><img src="./public/img/13.svg" alt="arrow view" class="icon"
               /></a>
               <a
-                href="#"
+                href="https://github.com/gregsypek/carpentrysite"
                 target="_blank"
                 class="projects__icon projects__icon--github"
                 ><img src="./public/img/14.svg" alt="arrow view" class="icon" />
@@ -306,7 +306,7 @@
         </div>
       </div>
     </section>
-    <section class="more">
+    <section class="more" id="contact">
       <div class="more__wrapper">
         <h3 class="more__title">Reach out for more?</h3>
         <div class="more__box">
@@ -318,13 +318,25 @@
           <div class="more__right">
             <ul class="more__nav">
               <li class="more__square more__square--email">
-                <a href="#" class="more__item more__item--email">Email</a>
+                <a
+                  href="mailto:gregsypek@gmail.com"
+                  class="more__item more__item--email"
+                  >Email</a
+                >
               </li>
               <li class="more__square more__square--twitter">
-                <a href="#" class="more__item more__item--twitter">Twitter</a>
+                <a
+                  href="https://twitter.com/gregsypek"
+                  class="more__item more__item--twitter"
+                  >Twitter</a
+                >
               </li>
               <li class="more__square more__square--linkedin">
-                <a href="#" class="more__item more__item--linkedin">Linkedin</a>
+                <a
+                  href="https://www.linkedin.com/in/grzegorz-sypek-47472a194/"
+                  class="more__item more__item--linkedin"
+                  >Linkedin</a
+                >
               </li>
             </ul>
           </div>
@@ -339,13 +351,19 @@
         <div class="footer__right">
           <ul class="footer__nav">
             <li class="footer__square footer__square--about">
-              <a href="#" class="footer__item footer__item--about">About</a>
+              <a href="#about" class="footer__item footer__item--about"
+                >About</a
+              >
             </li>
             <li class="footer__square footer__square--works">
-              <a href="#" class="footer__item footer__item--works">Works</a>
+              <a href="#projects" class="footer__item footer__item--works"
+                >Works</a
+              >
             </li>
             <li class="footer__square footer__square--back-up">
-              <a href="#" class="footer__item footer__item--back-up">Back up</a>
+              <a href="#home" class="footer__item footer__item--back-up"
+                >Back up</a
+              >
             </li>
           </ul>
         </div>
