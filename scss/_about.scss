@@ -66,7 +66,7 @@
     &--3 {
       font-weight: 300;
       @media (max-width: $huge) {
-        padding: 5rem;
+        padding: 5rem 10rem 5rem;
       }
     }
 
@@ -108,6 +108,9 @@
       background-color: $color-secondary;
       color: $color-tertiary;
       border: 1px solid $color-tertiary;
+    }
+    @media (max-width: $huge) {
+      margin: 5rem 10rem 0 auto;
     }
   }
 }

@@ -64,9 +64,9 @@
     }
     // width: 42vw;
     max-width: 744px;
-    @media (max-width: $huge) {
-      width: 65vw;
-    }
+    // @media (max-width: $huge) {
+    //   width: 65vw;
+    // }
   }
   &__details {
     width: 36rem;
@@ -84,6 +84,9 @@
     @media (max-width: $huge) {
       width: 70vw;
       padding: 0 2rem;
+    }
+    @media (max-width: $small) {
+      padding: 0;
     }
 
     &--title {
@@ -148,7 +151,7 @@
       background-color: $color-secondary;
     }
     @media (max-width: $huge) {
-      margin-right: 5vw;
+      margin-right: 10vw;
     }
   }
 }
