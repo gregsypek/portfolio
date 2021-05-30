@@ -325,15 +325,16 @@ h3 {
   .projects__icon {
     background-color: #39393a;
     border: none;
-    padding: 0 5px; }
+    padding: 0 5px;
+    cursor: pointer; }
     @media (max-width: 1089px) {
       .projects__icon {
         padding: 0 10px; } }
     @media (max-width: 576px) {
       .projects__icon {
         padding: 0 5px; } }
-    .projects__icon img {
-      vertical-align: center; }
+    .projects__icon:hover {
+      transform: scale(1.1); }
     .projects__icon--view {
       padding-top: 5px;
       height: 25px; }

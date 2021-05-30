@@ -102,14 +102,18 @@
     background-color: $color-tertiary;
     border: none;
     padding: 0 5px;
+    cursor: pointer;
     @media (max-width: $huge) {
       padding: 0 10px;
     }
     @media (max-width: $small) {
       padding: 0 5px;
     }
-    img {
-      vertical-align: center;
+    // img {
+    //   vertical-align: center;
+    // }
+    &:hover {
+      transform: scale(1.1);
     }
     // &--left {
     // }
