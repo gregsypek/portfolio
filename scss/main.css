@@ -483,6 +483,7 @@ h3 {
   display: grid;
       grid-template-areas: 'img img nav' 'img img info' 'img img info' 'img img btn';
   grid-column-gap: 5rem;
+  overflow: hidden;
 }
 
 @media (max-width: 1089px) {
@@ -579,6 +580,7 @@ h3 {
   background-color: #39393a;
   border: none;
   padding: 0 5px;
+  cursor: pointer;
 }
 
 @media (max-width: 1089px) {
@@ -593,8 +595,9 @@ h3 {
   }
 }
 
-.projects__icon img {
-  vertical-align: center;
+.projects__icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .projects__icon--view {

@@ -292,7 +292,8 @@ h3 {
     background-color: #ffffff;
     grid-area: img;
     max-width: 800px;
-    max-width: 744px; }
+    max-width: 744px;
+    overflow: hidden; }
     @media (max-width: 1089px) {
       .projects__img {
         width: 70vw;
