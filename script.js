@@ -1,59 +1,106 @@
-//SLIDER
-const slider = function () {
-  const box = document.querySelector('.projects__box--1');
-  const images = box.querySelectorAll('.projects__img');
-  const btnLeft = box.querySelector('.projects__icon--left');
-  const btnRight = box.querySelector('.projects__icon--right');
+const setsOfImages = [
+  [
+    './public/img/miodekv3-1.png',
+    './public/img/miodekv3-2.png',
+    './public/img/miodekv3-3.png',
+    './public/img/miodekv3-4.png',
+  ],
+  [
+    './public/img/wordsApp1.png',
+    './public/img/wordsApp2.png',
+    './public/img/wordsApp3.png',
+    './public/img/wordsApp4.png',
+  ],
+  ['./public/img/toDoApp1.png', './public/img/toDoApp2.png'],
+  [
+    './public/img/miodekv2-1.png',
+    './public/img/miodekv2-2.png',
+    './public/img/miodekv2-3.png',
+    './public/img/miodekv2-4.png',
+  ],
+  [
+    './public/img/stolarz1.png',
+    './public/img/stolarz2.png',
+    './public/img/stolarz3.png',
+    './public/img/stolarz4.png',
+  ],
+];
 
-  // const dotContainer = document.querySelector('.dots');
+const projects = [...document.querySelectorAll('[data-box]')];
+const leftBtns = [...document.querySelectorAll('[data-move-prev]')];
+const rightBtns = [...document.querySelectorAll('[data-move-next]')];
+console.log(projects);
+console.log('leftBtns', leftBtns);
+// console.log('box1', box0);
 
-  let curSlide = 0;
-  const maxSlide = images.length;
-  console.log(btnLeft);
-  console.log(btnRight);
+class Slider {
+  constructor(images, box, prevBtn, nextBtn) {
+    this.images = images;
+    this.slide = null;
+    this.prevBtn = prevBtn;
+    this.nextBtn = nextBtn;
+    this.image = null;
+    this.currentSlide = 0;
+    this.slideArrayLenght = 0;
+    this.box = box;
+  }
 
-  const goToSlide = function (slide) {
-    images.forEach(
-      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  initializeSlider() {
+    this.image = document.createElement('img');
+    this.image.classList.add('projects__img');
+
+    this.setSlideAttributes(0);
+
+    this.slideArrayLength = this.images && this.images.length;
+
+    this.box.appendChild(this.image);
+
+    this.addListeners();
+  }
+  addListeners() {
+    this.prevBtn.addEventListener('click', () =>
+      this.changeSlide(this.currentSlide - 1)
     );
-  };
+    this.nextBtn.addEventListener('click', () =>
+      this.changeSlide(this.currentSlide + 1)
+    );
 
-  //Next slide
-  const nextSlide = function () {
-    if (curSlide === maxSlide - 1) {
-      curSlide = 0;
-    } else curSlide++;
-    goToSlide(curSlide);
-  };
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') {
+        this.changeSlide(this.currentSlide - 1);
+      } else if (e.key === 'ArrowRight') {
+        this.changeSlide(this.currentSlide + 1);
+      }
+    });
+  }
+  changeSlide(index) {
+    if (index === -1 || index === this.slideArrayLength) return;
+    this.currentSlide = index;
+    this.setSlideAttributes(index);
+  }
+  setSlideAttributes(index) {
+    this.image.setAttribute(
+      'src',
+      Array.isArray(this.images) && this.images.length && this.images[index]
+    );
+    this.image.setAttribute('alt', `Image ${index + 1}`);
+  }
+}
 
-  const prevSlide = function () {
-    if (curSlide === 0) {
-      curSlide = maxSlide - 1;
-    } else curSlide--;
-    goToSlide(curSlide);
-  };
+// const slider = new Slider(
+//   box1,
+//   document.querySelector('.projects__box--0'),
+//   document.querySelector('.left--0'),
+//   document.querySelector('.right--0')
+// );
+// slider.initializeSlider();
 
-  const init = function () {
-    goToSlide(0);
-  };
-
-  init();
-
-  btnRight.addEventListener('click', nextSlide);
-  btnLeft.addEventListener('click', prevSlide);
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft') prevSlide();
-    if (e.key === 'ArrowRight') nextSlide();
-  });
-
-  //   dotContainer.addEventListener('click', function (e) {
-  //     if (e.target.classList.contains('dots__dot')) {
-  //       const { slide } = e.target.dataset;
-  //       goToSlide(slide);
-  //       activateDot(slide);
-  //     }
-  //   });
-  // };
-  // slider();
-};
-slider();
+projects.map((project, i) => {
+  const slider = new Slider(
+    setsOfImages[i],
+    project,
+    leftBtns[i],
+    rightBtns[i]
+  );
+  slider.initializeSlider();
+});

@@ -48,7 +48,7 @@
           '. . btn';
       }
     }
-    // overflow: hidden;
+    overflow: hidden;
   }
   // &__frame {
   // }
@@ -59,8 +59,12 @@
     background-color: $color-secondary;
     grid-area: img;
     max-width: 800px;
+    max-height: 480px;
+    width: 52vw;
+    height: 30vw;
     @media (max-width: $huge) {
-      width: 70vw;
+      width: 80vw;
+      height: 46vw;
       justify-self: center;
     }
     // width: 42vw;
@@ -68,7 +72,7 @@
     // @media (max-width: $huge) {
     //   width: 65vw;
     // }
-    overflow: hidden;
+    // overflow: hidden;
   }
   &__details {
     width: 36rem;
@@ -84,12 +88,12 @@
     height: 5rem;
     margin-bottom: -3rem;
     @media (max-width: $huge) {
-      width: 70vw;
+      width: 80vw;
       padding: 0 2rem;
     }
     @media (max-width: $small) {
       padding: 0;
-      width: auto;
+      // width: auto;
     }
 
     &--title {
