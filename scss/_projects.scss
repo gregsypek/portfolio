@@ -9,10 +9,13 @@
     font-weight: 300;
     padding: 0 1rem;
     font-size: var(--h4);
-    margin-left: 5rem;
+    margin: 5rem 0 0 5rem;
   }
   &__boxes {
     padding: 4rem;
+    @media (max-width: $small) {
+      padding: 0;
+    }
   }
   &__box {
     margin-top: 15rem;
@@ -67,6 +70,12 @@
       height: 46vw;
       justify-self: center;
     }
+    @media (max-width: $small) {
+      width: 90vw;
+      height: 60vw;
+      padding: 0;
+    }
+
     // width: 42vw;
     max-width: 744px;
     // @media (max-width: $huge) {
@@ -92,8 +101,8 @@
       padding: 0 2rem;
     }
     @media (max-width: $small) {
-      padding: 0;
-      // width: auto;
+      padding: 0.5rem;
+      width: 90vw;
     }
 
     &--title {
@@ -146,6 +155,9 @@
     grid-area: info;
     @media (max-width: $huge) {
       max-width: 70vw;
+    }
+    @media (max-width: $small) {
+      max-width: 90vw;
     }
   }
   &__btn {

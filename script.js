@@ -70,9 +70,6 @@ class Slider {
     } else {
       index++;
       this.currentSlide = index;
-
-      console.log(this.currentSlide);
-      console.log(index);
     }
   }
   addListeners() {

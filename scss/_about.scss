@@ -16,7 +16,7 @@
     }
     @media (max-width: $big) {
       // max-width: 80vw;
-      padding: 0;
+      padding: 5rem 0 5rem 0;
     }
   }
 
@@ -51,6 +51,7 @@
   }
 
   &__text {
+    max-width: 50rem;
     &-box {
       margin-top: 10rem;
       color: $color-primary;
@@ -69,12 +70,12 @@
     &--3 {
       font-weight: 300;
       @media (max-width: $huge) {
-        padding: 5rem 10rem 5rem;
+        padding: 0rem 5rem 5rem;
       }
-      @media (max-width: $small) {
-        // padding: 0;
-        padding: 5rem 5rem 5rem;
-      }
+      //   @media (max-width: $small) {
+      //     // padding: 0;
+      //     padding: 5rem 5rem 5rem;
+      //   }
     }
 
     &--1 {

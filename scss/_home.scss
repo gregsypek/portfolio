@@ -3,11 +3,27 @@
   min-height: 100vh;
   @include section;
   margin-bottom: 10rem;
+  @media (max-width: $big) {
+    // margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  @media (max-width: $small) {
+    // margin-top: 5rem;
+    padding: 0;
+  }
+
   // border: 1px solid orangered;
   &__main {
+    display: flex;
     padding: 5rem;
+    @media (max-width: $huge) {
+      flex-direction: column;
+    }
     @media (max-width: $big) {
       padding: 0;
+    }
+    @media (max-width: $small) {
+      padding: 5rem;
     }
   }
 
@@ -19,7 +35,9 @@
     margin-bottom: 5rem;
     @media (max-width: $small) {
       // padding: 0;
+      padding: 0.5rem 2rem;
       font-size: var(--p);
+      margin-bottom: 0;
     }
     &-list {
       color: $color-tertiary;
@@ -40,13 +58,7 @@
       }
     }
   }
-  &__main {
-    display: flex;
 
-    @media (max-width: $huge) {
-      flex-direction: column;
-    }
-  }
   &__picture-box {
     display: block;
     img {
@@ -82,8 +94,13 @@
     }
   }
   &__title {
+    // max-width: 50rem;
+    align-items: center;
+    @media (max-width: $huge) {
+      margin-bottom: 5rem;
+    }
     @media (max-width: $small) {
-      max-width: 80vw;
+      width: 80vw;
     }
     &--part1 {
       display: flex;
@@ -99,6 +116,8 @@
 
       @media (max-width: $huge) {
         margin: 0;
+        width: 50rem;
+        margin: 0 auto;
       }
       @media (max-width: $small) {
         max-width: 80vw;
@@ -122,18 +141,16 @@
     }
   }
   &__hi {
-    // width: 38rem;
     font-weight: normal;
     padding-left: 3rem;
-    @media (max-width: $big) {
-      margin-top: 3rem;
-      padding: 3rem;
-    }
     @media (max-width: $huge) {
-      padding: 5rem;
+      // padding: 5rem;
+      max-width: 45rem;
+      margin: 0 auto;
     }
+
     @media (max-width: $small) {
-      padding: 0;
+      font-size: 16px;
     }
   }
   &__btn {
@@ -151,6 +168,10 @@
 
     @media (max-width: $huge) {
       margin-top: 5rem;
+      margin-right: 10rem;
+    }
+    @media (max-width: $big) {
+      margin-right: 0;
     }
   }
 }
