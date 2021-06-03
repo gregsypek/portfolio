@@ -5,14 +5,9 @@
 }
 .more {
   &__wrapper {
-    // border: 1px solid white;
     padding: 5rem;
     max-width: 1152px;
     margin: 0 auto;
-    @media (max-width: $small) {
-      padding: 5rem 0 5rem 5rem;
-      width: 70vw;
-    }
   }
   &__box {
     display: flex;
@@ -22,15 +17,8 @@
     }
   }
 
-  &__left {
-    width: 50vw;
-    @media (max-width: $big) {
-      width: auto;
-    }
-  }
   &__title {
     color: $color-secondary;
-    // display: block;
     font-size: var(--h2);
     letter-spacing: -0.06em;
     @media (max-width: $huge) {
@@ -44,8 +32,8 @@
     width: 100%;
     font-size: var(--h5);
     @media (max-width: $small) {
-      // padding: 0;
-      margin: 10rem 5rem 0 0;
+      width: 58vw;
+      margin: 10rem 5rem 5rem 0;
     }
   }
 
@@ -55,12 +43,8 @@
   }
   &__nav {
     display: grid;
-    grid-template-columns: 1fr repeat(3, min-content);
+    grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(3, min-content);
-    @media (max-width: $small) {
-      grid-template-columns: 1fr repeat(2, min-content);
-    }
-    // grid-template-rows: repeat(3, min-content);
   }
   &__square {
     list-style-type: none;
@@ -70,23 +54,20 @@
     &--email {
       grid-row: 2/3;
       @media (max-width: $small) {
-        grid-row: 1/2;
-        grid-column: 3/-1;
+        // grid-row: 1/2;
+        // grid-column: 3/-1;
       }
     }
     &--twitter {
       grid-row: 2/3;
       @media (max-width: $small) {
-        grid-row: 2/3;
-        grid-column: 2/3;
       }
     }
     &--linkedin {
       grid-row: 1/2;
       grid-column: 3/-1;
       @media (max-width: $small) {
-        grid-column: 3/-1;
-        grid-row: 4/-1;
+        grid-row: 2/2;
       }
     }
   }
@@ -102,34 +83,22 @@
     @media (max-width: $huge) {
       width: 10rem;
       padding: 1.2rem 0.5rem;
-      // max-width: 80vw;
     }
     @media (max-width: $small) {
       width: 9rem;
       padding: 0.8rem 0.2rem;
-      // max-width: 80vw;
     }
     &--email {
-      // grid-column: 2/3;
       background-color: $color-fifth;
       color: $color-tertiary;
     }
     &--twitter {
-      // grid-column: 3/4;
       background-color: $color-primary;
       color: $color-tertiary;
     }
     &--linkedin {
-      // grid-column: 4/5;
-      // transform: translateY(-100%);
       color: $color-secondary;
       background-color: $color-tertiary;
-      // transition: rotate 0.2s ease-in-out;
-
-      // &:hover {
-      //   background-color: $color-secondary;
-      //   color: $color-tertiary;
-      // }
     }
 
     &--email,

@@ -1,43 +1,25 @@
 .footer {
   // min-height: 15vw;
   margin-bottom: 5rem;
-  // position: relative;
+  margin: 0 auto;
+  max-width: 1152px;
   &__wrapper {
-    // max-width: 1152px;
-    //TODO width of section foooter is a little moved aside  compare to section more
-    max-width: 1166px;
-    margin: 0 auto;
-    padding: 0 5rem;
+    max-width: 1152px;
+    margin: 0 5rem;
     display: flex;
     justify-content: space-between;
-    // padding: 0;
-    // border: 1px solid;
     @media (max-width: $small) {
-      justify-content: flex-end;
-      padding: 0 0 5rem 5rem;
+      display: block;
+      margin-top: -2.5rem;
+      margin-left: 5rem;
     }
   }
-  &__left {
-    align-self: flex-end;
-    width: 51vw;
-  }
   &__copyright {
-    width: 100%;
-    max-width: 50vw;
-    // position: absolute;
-    // bottom: 1rem;
-    // left: 5rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 1.4rem;
     margin-left: 5rem;
     transform: translateY(10rem);
-
-    // flex-basis: 100%;
-  }
-  &__right {
-    // padding-right: 5rem;
-    margin-left: 10px;
   }
   &__nav {
     @extend .more__nav;
@@ -51,6 +33,10 @@
     &--back-up {
       grid-row: 2/3;
       grid-column: 3/4;
+      @media (max-width: $small) {
+        // grid-column: 3/-1;
+        grid-row: 1/2;
+      }
     }
   }
   &__item {
@@ -64,7 +50,7 @@
     }
     &--back-up {
       @extend .more__item--linkedin;
-      // transform: translateY(100%);
+
       &:hover {
         border: 1px solid $color-tertiary;
       }
