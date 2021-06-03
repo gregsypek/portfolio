@@ -11,7 +11,7 @@ const setsOfImages = [
     './public/img/wordsApp3.png',
     './public/img/wordsApp4.png',
   ],
-  ['./public/img/toDoApp1.png', './public/img/toDoApp2.png'],
+  ['./public/img/toDoApp1.png', './public/img/todoApp2.png'],
   [
     './public/img/miodekv2-1.png',
     './public/img/miodekv2-2.png',
@@ -29,9 +29,6 @@ const setsOfImages = [
 const projects = [...document.querySelectorAll('[data-box]')];
 const leftBtns = [...document.querySelectorAll('[data-move-prev]')];
 const rightBtns = [...document.querySelectorAll('[data-move-next]')];
-console.log(projects);
-console.log('leftBtns', leftBtns);
-// console.log('box1', box0);
 
 class Slider {
   constructor(images, box, prevBtn, nextBtn) {
@@ -41,7 +38,7 @@ class Slider {
     this.nextBtn = nextBtn;
     this.image = null;
     this.currentSlide = 0;
-    this.slideArrayLenght = 0;
+    this.slideArrayLenght = images.length;
     this.box = box;
   }
 
@@ -57,27 +54,43 @@ class Slider {
 
     this.addListeners();
   }
-  addListeners() {
-    this.prevBtn.addEventListener('click', () =>
-      this.changeSlide(this.currentSlide - 1)
-    );
-    this.nextBtn.addEventListener('click', () =>
-      this.changeSlide(this.currentSlide + 1)
-    );
 
-    document.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft') {
-        this.changeSlide(this.currentSlide - 1);
-      } else if (e.key === 'ArrowRight') {
-        this.changeSlide(this.currentSlide + 1);
-      }
+  prevSlide(index) {
+    if (index === 0) {
+      this.currentSlide = index;
+      index = this.slideArrayLenght - 1;
+    } else index--;
+    this.currentSlide = index;
+  }
+
+  nextSlide(index) {
+    if (index === this.slideArrayLenght - 1) {
+      index = 0;
+      this.currentSlide = index;
+    } else {
+      index++;
+      this.currentSlide = index;
+
+      console.log(this.currentSlide);
+      console.log(index);
+    }
+  }
+  addListeners() {
+    this.prevBtn.addEventListener('click', () => {
+      this.prevSlide(this.currentSlide);
+      this.changeSlide(this.currentSlide);
+    });
+    this.nextBtn.addEventListener('click', () => {
+      this.nextSlide(this.currentSlide);
+      this.changeSlide(this.currentSlide);
     });
   }
   changeSlide(index) {
-    if (index === -1 || index === this.slideArrayLength) return;
+    // if (index === -1 || index === this.slideArrayLength) return;
     this.currentSlide = index;
     this.setSlideAttributes(index);
   }
+
   setSlideAttributes(index) {
     this.image.setAttribute(
       'src',
@@ -86,14 +99,6 @@ class Slider {
     this.image.setAttribute('alt', `Image ${index + 1}`);
   }
 }
-
-// const slider = new Slider(
-//   box1,
-//   document.querySelector('.projects__box--0'),
-//   document.querySelector('.left--0'),
-//   document.querySelector('.right--0')
-// );
-// slider.initializeSlider();
 
 projects.map((project, i) => {
   const slider = new Slider(
