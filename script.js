@@ -25,6 +25,63 @@ const setsOfImages = [
     './public/img/stolarz4.png',
   ],
 ];
+const setsOfProjects = [
+  {
+    title: 'Miodek v3',
+    description:
+      'My biggest website - containing 14 pages. Write for a real company with honey for sale. Including lazy loading images and slider components. Fully responsive with an easy to manage SCSS structure.',
+    liveLink: 'https://gregsypek.github.io/honey',
+    gitLink: 'https://github.com/gregsypek/honey',
+    readmeLink: 'https://github.com/gregsypek/honey/#readme',
+    languages: 'Languages: JavaScirpt, SCSS, HTML',
+    images: [
+      './public/img/miodekv3-1.png',
+      './public/img/miodekv3-2.png',
+      './public/img/miodekv3-3.png',
+      './public/img/miodekv3-4.png',
+    ],
+  },
+  {
+    title: 'WordsApp',
+    description:
+      'Application built as a helper for learning new words with two print option on preformatted lists.',
+    liveLink: 'https://wordsapp.netlify.app',
+    gitLink: 'https://github.com/gregsypek/wordsApp2',
+    readmeLink: 'https://github.com/gregsypek/wordsApp2/#readme',
+    languages: 'Languages: JavaScirpt, SCSS, HTML',
+    images: ['./public/img/toDoApp1.png', './public/img/todoApp2.png'],
+  },
+  {
+    title: 'Miodek v2',
+    description:
+      'Fully accessible and responsive One Page website build with advanced CSS layout, which I implement thanks to Jen Kramer course on Frontend Masters',
+    liveLink: 'https://gregsypek.github.io/clover',
+    gitLink: 'https://github.com/gregsypek/clover',
+    readmeLink: 'https://github.com/gregsypek/clover/#readme',
+    languages: 'Languages: JavaScirpt, SCSS, HTML',
+    images: [
+      './public/img/miodekv2-1.png',
+      './public/img/miodekv2-2.png',
+      './public/img/miodekv2-3.png',
+      './public/img/miodekv2-4.png',
+    ],
+  },
+  {
+    title: 'Schody Zaliński',
+    description:
+      "A project which I've for a client. Simple, fully responsive website with a fast time loading page. It has no external scripts and it's fully designed by me, including logo",
+    liveLink: 'https://schodyzalinski.pl',
+    gitLink: 'https://github.com/gregsypek/carpentry2',
+    readmeLink: 'https://github.com/gregsypek/carpentry2/#readme',
+    languages: 'Languages: JavaScirpt, SCSS, HTML',
+    images: [
+      './public/img/stolarz1.png',
+      './public/img/stolarz2.png',
+      './public/img/stolarz3.png',
+      './public/img/stolarz4.png',
+    ],
+  },
+];
 
 const projects = [...document.querySelectorAll('[data-box]')];
 const leftBtns = [...document.querySelectorAll('[data-move-prev]')];
@@ -98,6 +155,7 @@ class Slider {
 }
 
 projects.map((project, i) => {
+  console.log(project.querySelector('.projects__nav--title').textContent);
   const slider = new Slider(
     setsOfImages[i],
     project,
