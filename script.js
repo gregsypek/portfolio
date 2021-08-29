@@ -1,5 +1,11 @@
 const setsOfImages = [
   [
+    './public/img/schody1.png',
+    './public/img/schody2.png',
+    './public/img/schody3.png',
+    './public/img/schody4.png',
+  ],
+  [
     './public/img/miodekv3-1.png',
     './public/img/miodekv3-2.png',
     './public/img/miodekv3-3.png',
@@ -17,12 +23,6 @@ const setsOfImages = [
     './public/img/miodekv2-2.png',
     './public/img/miodekv2-3.png',
     './public/img/miodekv2-4.png',
-  ],
-  [
-    './public/img/stolarz1.png',
-    './public/img/stolarz2.png',
-    './public/img/stolarz3.png',
-    './public/img/stolarz4.png',
   ],
 ];
 const setsOfProjects = [
@@ -67,18 +67,18 @@ const setsOfProjects = [
     ],
   },
   {
-    title: 'Schody Zaliński',
+    title: 'Schody Zalinski',
     description:
-      "A project which I've for a client. Simple, fully responsive website with a fast time loading page. It has no external scripts and it's fully designed by me, including logo",
+      "A project which I've made for a client. Simple, fully responsive website with a fast time loading page. It has no frameworks and it's fully designed by me, including logo",
     liveLink: 'https://schodyzalinski.pl',
     gitLink: 'https://github.com/gregsypek/carpentry2',
     readmeLink: 'https://github.com/gregsypek/carpentry2/#readme',
     languages: 'Languages: JavaScirpt, SCSS, HTML',
     images: [
-      './public/img/stolarz1.png',
-      './public/img/stolarz2.png',
-      './public/img/stolarz3.png',
-      './public/img/stolarz4.png',
+      './public/img/schody1.png',
+      './public/img/schody2.png',
+      './public/img/schody3.png',
+      './public/img/schody4.png',
     ],
   },
 ];
