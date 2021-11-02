@@ -4,6 +4,8 @@ const setsOfImages = [
     './public/img/schody2.png',
     './public/img/schody3.png',
     './public/img/schody4.png',
+    './public/img/schody5.png',
+    './public/img/schody6.png',
   ],
   [
     './public/img/miodekv3-1.png',
@@ -69,7 +71,7 @@ const setsOfProjects = [
   {
     title: 'Schody Zalinski',
     description:
-      "A project which I've made for a client. Simple, fully responsive website with a fast time loading page. It has no frameworks and it's fully designed by me, including logo",
+      "A web application which I've made for a client. Simple, fully responsive website with a fast, scalable, and powerful Node.js RESTful APIs. It includes modern authentication with JWT and authorization. Allows for all CRUD operations with MongoDB database.",
     liveLink: 'https://schodyzalinski.pl',
     gitLink: 'https://github.com/gregsypek/carpentry2',
     readmeLink: 'https://github.com/gregsypek/carpentry2/#readme',
