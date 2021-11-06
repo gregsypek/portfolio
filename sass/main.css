@@ -35,6 +35,12 @@ body {
 }
 
 body {
+  color: #616063;
+  color: #272822;
+  color: #32399c;
+}
+
+body {
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   line-height: 1.7;
