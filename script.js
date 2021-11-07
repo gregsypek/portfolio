@@ -12,6 +12,8 @@ const setsOfImages = [
     './public/img/miodekv3-2.png',
     './public/img/miodekv3-3.png',
     './public/img/miodekv3-4.png',
+    './public/img/miodekv3-5.png',
+    './public/img/miodekv3-6.png',
   ],
   [
     './public/img/wordsApp1.png',
